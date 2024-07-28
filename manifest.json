@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "HAR Saver",
+  "version": "1.0",
+  "description": "Save network data as HAR file when CTRL+SHIFT+H is pressed.",
+  "permissions": ["webRequest", "downloads", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HAR Saver",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "saveHAR": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H"
+      },
+      "description": "Save network data as HAR file"
+    }
+  },
+  "host_permissions": ["<all_urls>"]
+}
